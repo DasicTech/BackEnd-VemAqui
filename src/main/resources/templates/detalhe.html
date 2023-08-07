@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Vem Aqui</title>
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>			
+		 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+* {
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #574874;
+
+}
+section {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+  background-color: #574874;
+  border-bottom: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  
+}
+.section-img{
+  position: absolute;
+ right: 75%;
+ 
+  
+}
+.section-li{
+  color: #7D2AE8; 
+  font-size: 19px;
+  font-family: sans-serif; 
+  list-style: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.detalhe_content{
+	justify-content: center;
+	background-color:white;
+	width: 600px;
+	height: 500px;
+	border: 2px solid black;
+	border-radius: 10px;
+	
+}
+.all{
+display: flex;
+justify-content: center;
+}
+h1{
+	text-align: center;
+	color: white;
+}
+
+
+p{
+	margin-top: 12px;
+	font-size: 30px;
+	margin-left: 25px;
+}
+
+span{
+	margin-left: 10px;
+	font-size: 25px;
+}
+
+nav {
+  width: 60%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+li:hover {
+  color: black;
+}
+.home-img{
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+  
+}
+
+
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+  }
+  main {
+      height: 80vh;
+  }
+  
+  
+  footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+  }
+  
+  .footer-link {
+    text-decoration: none;
+  }
+  
+  #footer_content {
+    margin-top: 30px;
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+  }
+  
+  #footer_contacts h1 {
+    margin-bottom: 0.75rem;
+  }
+  
+  #footer_social_media .footer-link {
+    display: inline; /*deixar os simbolos uma ao lado do outro*/
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+  }
+  
+  #footer_social_media .footer-link i {
+    font-size: 1.9rem;
+  }
+  
+  #footer_social_media .footer-link:hover {
+    opacity: 0.8;
+  }
+  .logo-rodape {
+    position: absolute;
+    width: 110px;
+    left: 85%;
+    display: flex;
+  }
+  .footer-li{ /*deixar os nomes no lugar*/
+    position: absolute;
+   bottom: -15%;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+  
+  .footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+  }
+  
+  .footer-list .footer-link:hover {
+    color: #7f37c9;
+  }
+  
+  .material-icons{
+	  width: 300px;
+  }
+  
+  #footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #footer_content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 426px) {
+    #footer_content {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 3rem 2rem;
+    }
+  }
+  
+  
+	  </style>
+	  
+</head>
+<body>
+ <section >
+      <nav>
+        <ul>
+          <a href="home.html">
+            <li class="section-li">INICIO</li>
+          </a>
+          <a href="pesquisa.html">
+            <li class="section-li">PESQUISAR</li>
+          </a>
+          <a href="">
+            <li class="section-li">FEEDBACK</li>
+          </a>
+          <a href="./login.html" id="login">
+            <li class="section-li">LOGIN</li>
+          </a>
+
+          <a href="./cadastro.html">
+            <li class="section-li"> CADASTRO</li>
+          </a>
+        </ul>
+      </nav>
+    </section>
+
+  <h1>Detalhes do Estabelecimento</h1>
+
+
+<div class="all">
+	<div class="detalhe_content">
+		<img th:src="@{icone-photo-noire.png}" alt="Foto do Estabelecimento">
+		<th:block th:if="${estabelecimento != null}">
+        	<p>NOME: <span th:text="${estabelecimento.nome}"></span></p><br>
+       		 <p>ENDEREÇO: <br>- <span th:text=" ${estabelecimento.endereco}"></span> </p><br>
+        	<p>DESCRIÇÃO: <br>- <span th:text="${estabelecimento.descricao}">- </span></p><br>
+        	<p>TELEFONE: <br>- <span th:text="${estabelecimento.telefone}">- </span></p><br>
+        	<p>HORÁRIO: <br>- <span th:text="${estabelecimento.hora_abertura}">- </span> - <span th:text="${estabelecimento.hora_fechamento}"></span></p>
+   		 </th:block>
+	</div>
+</div>
+
+		   
+
+ <main>
+        
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+
+                <h3>VEM AQUI</h3>
+                <p>Contato</p>
+
+
+                <div id="footer_social_media">
+                    <a href="https://github.com/DasicTech" class="footer-link" id="github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:dasictech78@gmail.com" class="footer-link" id="email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    </div>
+
+                    <div class="footer-infor">
+                        <li>Recife, Pernambuco</li>
+						<li>Tel: (81) 99999-9999</li>
+                    </div>
+                </div>
+                        <img src="imgs/logo_img_rodape.svg" width="30%" class="logo-rodape">
+                       
+                        <ul class="footer-list">
+                            <li>
+                                <h3>Sobre</h3>
+                            </li>
+                            <li class="footer-li">
+                                <a href="nos.html" class="footer-link">Quem Somos?</a>
+                            </li>
+                            
+                        </ul>
+        
+                        <ul class="footer-list">
+                            <li>
+                                <h3>Software</h3>
+                            </li>
+                            <li class="footer-li">
+                                <a href="infor.html" class="footer-link">O que somos?</a>
+                            </li>
+                            
+                        </ul>
+
+                
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 all rights reserved; 2023 Vem Aqui
+        </div>
+    </footer>
+ 
+
+
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+
+
+</html>
